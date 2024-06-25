@@ -38,13 +38,16 @@ python main.py --track=DF --loss=CCE --is_eval --eval --model_path='/path/to/you
 
 We also provide a pre-trained model which follows a Mel-scale distribution of the sinc filters at the input layer, which can be downloaded from [here](https://www.asvspoof.org/asvspoof2021/pre_trained_DF_RawNet2.zip). To use it you can run: 
 ```
-python main.py --track=DF --loss=CCE --is_eval --eval --model_path='/path/to/your/pre_trained_DF_model.pth' --eval_output='pre_trained_eval_CM_scores.txt'
+我的
+python main.py --track=DF --loss=CCE --is_eval --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\LA\Baseline-RawNet2\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=eval_CM_scores.txt
 ```
 
 If you would like to compute scores on the development set of ASVspoof 2019 simply run:
 
 ```
 python main.py --track=DF --loss=CCE --eval --model_path='/path/to/your/best_model.pth' --eval_output='dev_CM_scores.txt'
+
+python main.py --track=DF --loss=CCE --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\LA\Baseline-RawNet2\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=dev_CM_scores.txt
 ```
 
 ## Contact
@@ -61,4 +64,17 @@ If you use this code in your research please use the following citation:
   pages={6369-6373}
 }
 
+```
+---
+## 問題解決
+
+### cuda無法使用
+參考: https://stackoverflow.com/questions/56239310/could-not-find-a-version-that-satisfies-the-requirement-torch-1-0-0
+### 如果scipy有問題
+```
+conda install scipy
+```
+### tenserboard
+```
+tensorboard --logdir logs/fit
 ```

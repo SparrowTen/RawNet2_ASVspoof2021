@@ -12,6 +12,7 @@ from model import RawNet
 from tensorboardX import SummaryWriter
 from core_scripts.startup_config import set_random_seed
 
+
 __author__ = "Hemlata Tak"
 __email__ = "tak@eurecom.fr"
 __credits__ = ["Jose Patino", "Massimiliano Todisco", "Jee-weon Jung"]
@@ -92,7 +93,7 @@ def train_epoch(train_loader, model, lr,optim, device):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ASVspoof2021 baseline system')
     # Dataset
-    parser.add_argument('--database_path', type=str, default='/your/path/to/data/ASVspoof_database/', help='Change this to user\'s full directory address of LA database (ASVspoof2019- for training & development (used as validation), ASVspoof2021 for evaluation scores). We assume that all three ASVspoof 2019 LA train, LA dev and ASVspoof2021 LA eval data folders are in the same database_path directory.')
+    parser.add_argument('--database_path', type=str, default='C:/Users/bente/Desktop/dataset/forRawNet2/database_path/LA/', help='Change this to user\'s full directory address of LA database (ASVspoof2019- for training & development (used as validation), ASVspoof2021 for evaluation scores). We assume that all three ASVspoof 2019 LA train, LA dev and ASVspoof2021 LA eval data folders are in the same database_path directory.')
     '''
     % database_path/
     %   |- LA
@@ -101,7 +102,7 @@ if __name__ == '__main__':
     %      |- ASVspoof2019_LA_dev/flac
     '''
 
-    parser.add_argument('--protocols_path', type=str, default='/your/path/to/protocols/ASVspoof_database/', help='Change with path to user\'s LA database protocols directory address')
+    parser.add_argument('--protocols_path', type=str, default='C:/Users/bente/Desktop/dataset/forRawNet2/protocols_path/', help='Change with path to user\'s LA database protocols directory address')
     '''
     % protocols_path/
     %   |- ASVspoof_LA_cm_protocols
