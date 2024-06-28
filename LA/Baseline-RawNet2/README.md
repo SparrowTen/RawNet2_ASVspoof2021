@@ -34,20 +34,19 @@ To test your own model on the ASVspoof 2021 DF evaluation set:
 
 ```
 python main.py --track=DF --loss=CCE --is_eval --eval --model_path='/path/to/your/your_best_model.pth' --eval_output='eval_CM_scores.txt'
-```
 
-We also provide a pre-trained model which follows a Mel-scale distribution of the sinc filters at the input layer, which can be downloaded from [here](https://www.asvspoof.org/asvspoof2021/pre_trained_DF_RawNet2.zip). To use it you can run: 
-```
 我的
-python main.py --track=DF --loss=CCE --is_eval --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\LA\Baseline-RawNet2\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=eval_CM_scores.txt
+python main.py --track=LA --loss=CCE --is_eval --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=eval_CM_scores2.txt
 ```
+We also provide a pre-trained model which follows a Mel-scale distribution of the sinc filters at the input layer, which can be downloaded from [here](https://www.asvspoof.org/asvspoof2021/pre_trained_DF_RawNet2.zip). To use it you can run: 
+
 
 If you would like to compute scores on the development set of ASVspoof 2019 simply run:
 
 ```
 python main.py --track=DF --loss=CCE --eval --model_path='/path/to/your/best_model.pth' --eval_output='dev_CM_scores.txt'
 
-python main.py --track=DF --loss=CCE --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\LA\Baseline-RawNet2\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=dev_CM_scores.txt
+python main.py --track=DF --loss=CCE --eval --model_path=C:\Users\bente\Desktop\model\RawNet2_ASVspoof2021\preTrainmodel\pre_trained_DF_RawNet2.pth --eval_output=dev_CM_scores.txt
 ```
 
 ## Contact

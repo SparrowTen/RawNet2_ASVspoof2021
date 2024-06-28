@@ -88,6 +88,12 @@ Here are some example use cases. Let's assume we have a CM score file `score.txt
 Compute results using pre-computed t-DCF C012 coefficients provided by the organizers
 ```sh
 python main.py --cm-score-file score.txt --track LA --subset eval
+
+DF
+python main.py --cm-score-file C:/Users/bente/Desktop/model/RawNet2_ASVspoof2021/eval-package/keys/DF/CM/RawNet2/score.txt --track DF --subset eval
+
+LA
+python main.py --cm-score-file C:/Users/bente/Desktop/model/RawNet2_ASVspoof2021/eval-package/keys/LA/CM/RawNet2/score.txt --track LA --subset eval
 ```
 
 #### Case 2
@@ -104,6 +110,7 @@ Recompute C012 using my own ASV scores, save it to `./LA-c012.npy` and use the n
 
 ```sh
 python main.py --cm-score-file score.txt --track LA --subset eval --recompute-c012 --c012-path ./LA-c012.npy --asv-score-file ./asv-score.txt
+python main.py --cm-score-file C:/Users/bente/Desktop/model/RawNet2_ASVspoof2021/eval-package/keys/DF/CM/RawNet2/score.txt --track DF --subset eval --recompute-c012 --c012-path ./LA-c012.npy --asv-score-file ./asv-score.txt
 ```
 
 #### Case 4

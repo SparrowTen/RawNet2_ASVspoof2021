@@ -94,7 +94,7 @@ def train_epoch(train_loader, model, lr,optim, device):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='ASVspoof2021 baseline system')
     # Dataset
-    parser.add_argument('--database_path', type=str, default='/your/path/to/data/ASVspoof_database/', help='Change this to user\'s full directory address of DF database. We assume that all three ASVspoof 2019 LA train, LA dev and ASVspoof2021 DF eval data folders are in the same database_path directory.')
+    parser.add_argument('--database_path', type=str, default='C:/Users/bente/Desktop/dataset/forRawNet2/database_path/LA/', help='Change this to user\'s full directory address of DF database. We assume that all three ASVspoof 2019 LA train, LA dev and ASVspoof2021 DF eval data folders are in the same database_path directory.')
     '''
     % database_path/
     %   |- DF
@@ -103,7 +103,7 @@ if __name__ == '__main__':
     %      |- ASVspoof2019_LA_dev/flac
     '''
 
-    parser.add_argument('--protocols_path', type=str, default='/your/path/to/protocols/ASVspoof_database/', help='Change with path to user\'s DF ASVspoof2021 database protocols directory address')
+    parser.add_argument('--protocols_path', type=str, default='C:/Users/bente/Desktop/dataset/forRawNet2/protocols_path/', help='Change with path to user\'s DF ASVspoof2021 database protocols directory address')
     '''
     % protocols_path/
     %   |- ASVspoof_DF_cm_protocols

@@ -12,6 +12,7 @@ $: python PATH_TO_SCORE_FILE PATH_TO_GROUDTRUTH_DIR phase
 
 Example:
 $: python evaluate.py score.txt ./keys eval
+python evaluate.py C:/Users/bente/Desktop/model/RawNet2_ASVspoof2021/eval-package/keys/DF/CM/RawNet2/score.txt C:/Users/bente/Desktop/model/RawNet2_ASVspoof2021/eval-package/keys/DF/ eval
 """
 import sys, os.path
 import numpy as np
